@@ -1,4 +1,4 @@
-# lab_3_191118
+# Exam Scheduler
 
 A new Flutter project.
 
