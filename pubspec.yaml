@@ -40,7 +40,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   datetime_picker_formfield: ^2.0.1
   syncfusion_flutter_calendar: ^20.3.59
-  flutter_local_notifications:
+  flutter_local_notifications: ^13.0.0
   timezone:
 
 dev_dependencies:

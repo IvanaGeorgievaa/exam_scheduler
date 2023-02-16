@@ -4,6 +4,7 @@ import 'package:lab_3_191118/screens/calendar.dart';
 import '../data/exams_data.dart';
 import '../model/exam.dart';
 
+import '../services/notification_service.dart';
 import '../utils/notifications.dart';
 import '../widgets/create_exam_form.dart';
 import 'authentication.dart';
@@ -123,6 +124,15 @@ class _MainScreenState extends State<MainScreen> {
                           element.getUser.username == _currUser!.username)
                       .toList()),
                 ),
+                Center(
+                    child: ElevatedButton(
+                  child: const Text('Show notifications'),
+                  onPressed: () {
+                    NotificationService().showNotification(
+                        title: 'Exam Notification',
+                        body: 'You have an exam today');
+                  },
+                )),
               ],
             ),
           )
