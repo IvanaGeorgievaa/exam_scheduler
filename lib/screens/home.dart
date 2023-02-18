@@ -26,8 +26,8 @@ class _MainScreenState extends State<MainScreen> {
   var _isLogged = false;
   User? _currUser;
 
-  void _addNewExamWithArgs(subjectName, dateAndTime) {
-    var newExam = Exam(subjectName, dateAndTime, _currUser!);
+  void _addNewExamWithArgs(subjectName, dateAndTime, location) {
+    var newExam = Exam(subjectName, dateAndTime, _currUser!, location);
     setState(() {
       _exams.add(newExam);
       _pressed = !_pressed;

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lab_3_191118/screens/authentication.dart';
 import 'package:lab_3_191118/screens/calendar.dart';
+import 'package:lab_3_191118/screens/exam_details.dart';
 import 'package:lab_3_191118/screens/home.dart';
 import 'package:lab_3_191118/screens/list_exams.dart';
+import 'package:lab_3_191118/screens/maps.dart';
 import 'package:lab_3_191118/utils/global_theme.dart';
 import 'data/exams_data.dart';
 
@@ -45,6 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
               const AuthenticationScreen(null, null, null),
           ListExamScreen.routeName: (ctx) => ListExamScreen(List.empty()),
           CalendarScreen.routeName: (ctx) => const CalendarScreen(),
+          MapsExamScreen.routeName: (ctx) => const MapsExamScreen(),
+          DetailsExamScreen.routeName: (ctx) => const DetailsExamScreen(),
         },
         home: const MainScreen());
   }

@@ -42,6 +42,11 @@ dependencies:
   syncfusion_flutter_calendar: ^20.3.59
   flutter_local_notifications: ^13.0.0
   timezone:
+  flutter_polyline_points: ^1.0.0
+  google_maps_flutter: ^2.1.2
+  location: ^4.3.0
+  geocode: ^1.0.1
+  dio: ^4.0.4
 
 dev_dependencies:
   flutter_test:

@@ -4,6 +4,8 @@ import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as timezone;
 
 class NotificationApi {
+  static const String notificationTitle = 'Exam Reminder';
+  static const String notificationPayload = 'exam.reminder';
   static final _notifications = FlutterLocalNotificationsPlugin();
   static int notificationCounter = 0;
 
@@ -88,6 +90,20 @@ class NotificationApi {
     for (var exam in exams) {
       scheduleNotification(exam);
     }
+  }
+
+  static Future showLocationNotification(
+      String subjectName, String distance) async {
+    String notificationBody =
+        'You are $distance close to the location of the exam for subject $subjectName';
+
+    _notifications.show(
+      notificationCounter++,
+      notificationTitle,
+      notificationBody,
+      await _notificationDetails(),
+      payload: notificationPayload,
+    );
   }
 
   static void cancelNotifications() => _notifications.cancelAll();
