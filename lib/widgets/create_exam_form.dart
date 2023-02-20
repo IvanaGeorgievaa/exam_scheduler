@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 
@@ -101,7 +102,8 @@ class NewExamScreenState extends State<NewExamScreen> {
                 }
                 _formKey.currentState!.save();
 
-                _callFunction(_subjectName, _dateAndTime);
+                _callFunction(_subjectName, _dateAndTime,
+                    const LatLng(42.004227, 21.409944));
               },
             ),
           ],
